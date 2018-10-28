@@ -12,8 +12,8 @@
 import Foundation
 
 //create typealias to facilitate conversion with controller
-typealias UserProgressSuccess = (UsersProgressModel, NetworkStatus) -> Void
-typealias UserProgressFailure = (NetworkStatus) -> Void
+typealias UserProgressSuccess = (UsersProgressModel?, HMNetworkStatus) -> Void
+typealias UserProgressFailure = (HMNetworkStatus) -> Void
 
 
 struct UserProgressDAO {
@@ -22,7 +22,36 @@ struct UserProgressDAO {
     func getUserProgress(userId: String?, success: UserProgressSuccess, failure: UserProgressFailure) {
         
         //unwrap the userId; use it if given
+        if let givenUserID = userId {
+            
+        } else {
+            
+        }
+        
         //find the "healthy-minds-description.json" in the bundle
+        if let healthyMindsDescrURL = Bundle.main.url(forResource: "healthy-minds-description", withExtension: "json") {
+            //load return file into a buffer
+            do {
+                let healthyMindsData = try Data(contentsOf: healthyMindsDescrURL)
+                
+                //use Decocable to load data structure
+                let healthyMindsDecoder = JSONDecoder()
+                let healthyMindsStructure = try healthyMindsDecoder.decode(UsersProgressModel.self, from: healthyMindsData)
+                //sent success to the caller
+                
+                success(healthyMindsStructure, HMNetworkStatus(returnCode: 200, returnDescription: "Decoded data being returned successfully."))
+                
+                
+            } catch  {
+                print("Error loading the data file from the bundle")
+                failure(HMNetworkStatus(returnCode: 500, returnDescription: "Error loading the data file from the bundle"))
+            }
+            
+            
+            
+        }
+        
+        
         //load it into a buffer
         //user Decodble to load the data structure
         //return the data via the closure to the caller
@@ -31,6 +60,6 @@ struct UserProgressDAO {
     }
     
     
-    
 }
+
 

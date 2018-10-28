@@ -821,7 +821,7 @@ struct ActivityMetadatum: Codable {
 
 //MARK:- Network Status model {
 
-struct NetworkStatus {
+struct HMNetworkStatus {
     var returnCode: Int
     var returnDescription: String
 }
