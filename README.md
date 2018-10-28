@@ -1,0 +1,2 @@
+# HealthyMindsChallenge
+Challenge solution 
