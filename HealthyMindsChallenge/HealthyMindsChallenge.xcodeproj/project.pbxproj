@@ -22,6 +22,8 @@
 		943DC8642185DBF1004F6FAF /* UsersProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC8632185DBF1004F6FAF /* UsersProgressModel.swift */; };
 		943DC8672185DE0A004F6FAF /* UserActivityDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC8662185DE0A004F6FAF /* UserActivityDAO.swift */; };
 		943DC86921871F62004F6FAF /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86821871F62004F6FAF /* UserDataCell.swift */; };
+		943DC86B21872208004F6FAF /* PartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86A21872208004F6FAF /* PartsController.swift */; };
+		943DC86D21872224004F6FAF /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86C21872224004F6FAF /* TasksController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		943DC8632185DBF1004F6FAF /* UsersProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsersProgressModel.swift; path = HealthyMindsChallenge/UsersProgressModel.swift; sourceTree = "<group>"; };
 		943DC8662185DE0A004F6FAF /* UserActivityDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityDAO.swift; sourceTree = "<group>"; };
 		943DC86821871F62004F6FAF /* UserDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
+		943DC86A21872208004F6FAF /* PartsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsController.swift; sourceTree = "<group>"; };
+		943DC86C21872224004F6FAF /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			children = (
 				943DC85C2185D8B8004F6FAF /* UserProgressData.swift */,
 				943DC85E2185D8EA004F6FAF /* SolutionSteps.swift */,
+				943DC86A21872208004F6FAF /* PartsController.swift */,
+				943DC86C21872224004F6FAF /* TasksController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -327,10 +333,12 @@
 			files = (
 				943DC85F2185D8EA004F6FAF /* SolutionSteps.swift in Sources */,
 				943DC8242185D734004F6FAF /* AppDelegate.swift in Sources */,
+				943DC86D21872224004F6FAF /* TasksController.swift in Sources */,
 				943DC86921871F62004F6FAF /* UserDataCell.swift in Sources */,
 				943DC8672185DE0A004F6FAF /* UserActivityDAO.swift in Sources */,
 				943DC85D2185D8B8004F6FAF /* UserProgressData.swift in Sources */,
 				943DC8642185DBF1004F6FAF /* UsersProgressModel.swift in Sources */,
+				943DC86B21872208004F6FAF /* PartsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
