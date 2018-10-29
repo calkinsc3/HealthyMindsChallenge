@@ -23,9 +23,9 @@ struct UserProgressDAO {
         
         //unwrap the userId; use it if given
         if let givenUserID = userId {
-            
+            print("The given userID is \(givenUserID)")
         } else {
-            
+            print("Return will not be based on user.")
         }
         
         //find the "healthy-minds-description.json" in the bundle
