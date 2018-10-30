@@ -8,6 +8,9 @@
 
 import Foundation
 
+//Tuple to store completion meta data
+typealias ActivityCompletion = (activityUUID: String, lastCompletedOn: Date?)
+
 
 //MARK:- User Progress Model
 struct UsersProgressModel: Codable {
@@ -817,6 +820,15 @@ struct HDActivity: Codable {
 
 struct ActivityMetadatum: Codable {
     let lastCompletedOn: String
+}
+
+//MARK:- ActivityMetaData
+struct ActivityMetaData {
+    var cohortName : String
+    var mostRecentlyCompletedActivityId : String
+    
+    //Tuple of activity UUIDs and date they were completed
+    var activityCompletions : [ActivityCompletion]?
 }
 
 //MARK:- Network Status model {
