@@ -25,6 +25,7 @@
 		943DC86B21872208004F6FAF /* PartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86A21872208004F6FAF /* PartsController.swift */; };
 		943DC86D21872224004F6FAF /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86C21872224004F6FAF /* TasksController.swift */; };
 		943DC86F2187DACE004F6FAF /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86E2187DACE004F6FAF /* SeriesController.swift */; };
+		943DC8712187DFF9004F6FAF /* ActvitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC8702187DFF9004F6FAF /* ActvitiesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		943DC86A21872208004F6FAF /* PartsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsController.swift; sourceTree = "<group>"; };
 		943DC86C21872224004F6FAF /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
 		943DC86E2187DACE004F6FAF /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
+		943DC8702187DFF9004F6FAF /* ActvitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActvitiesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				943DC86A21872208004F6FAF /* PartsController.swift */,
 				943DC86C21872224004F6FAF /* TasksController.swift */,
 				943DC86E2187DACE004F6FAF /* SeriesController.swift */,
+				943DC8702187DFF9004F6FAF /* ActvitiesController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				943DC8672185DE0A004F6FAF /* UserActivityDAO.swift in Sources */,
 				943DC85D2185D8B8004F6FAF /* UserProgressData.swift in Sources */,
 				943DC8642185DBF1004F6FAF /* UsersProgressModel.swift in Sources */,
+				943DC8712187DFF9004F6FAF /* ActvitiesController.swift in Sources */,
 				943DC86B21872208004F6FAF /* PartsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

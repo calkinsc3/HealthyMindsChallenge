@@ -222,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNg-3K-xv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4402" y="-296"/>
+            <point key="canvasLocation" x="5356" y="-292"/>
         </scene>
         <!--Series-->
         <scene sceneID="GQE-ld-46b">
@@ -233,15 +233,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seriesCell" id="1bJ-ru-ce7" customClass="UserDataCell" customModule="HealthyMindsChallenge" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="seriesCell" id="1bJ-ru-ce7" customClass="UserDataCell" customModule="HealthyMindsChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1bJ-ru-ce7" id="eyE-LV-vFP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efT-3m-EtM">
-                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <rect key="frame" x="8" y="8" width="325" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -265,12 +265,60 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="zjo-C6-N7I" kind="show" identifier="taskSegue" id="9kY-xh-uYi"/>
+                        <segue destination="8TR-eA-cwN" kind="show" identifier="actvitiesSegue" id="4UU-8Z-hNB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOa-O9-3Kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3391" y="-293"/>
+        </scene>
+        <!--Activities-->
+        <scene sceneID="ZjQ-t4-HIo">
+            <objects>
+                <tableViewController title="Activities" id="8TR-eA-cwN" customClass="ActvitiesController" customModule="HealthyMindsChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Inj-Dk-s0r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="activityCell" id="XKt-5W-cFT" customClass="UserDataCell" customModule="HealthyMindsChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XKt-5W-cFT" id="rY2-xC-eCH">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-3l-7OM">
+                                            <rect key="frame" x="8" y="8" width="325" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="2Jg-3l-7OM" secondAttribute="bottom" constant="8" id="8v9-d7-MCJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="2Jg-3l-7OM" secondAttribute="trailing" constant="8" id="CRY-Is-Maa"/>
+                                        <constraint firstItem="2Jg-3l-7OM" firstAttribute="leading" secondItem="rY2-xC-eCH" secondAttribute="leading" constant="8" id="Cwe-Ob-B7z"/>
+                                        <constraint firstItem="2Jg-3l-7OM" firstAttribute="top" secondItem="rY2-xC-eCH" secondAttribute="top" constant="8" id="bUh-WR-Wgj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dataTitle" destination="2Jg-3l-7OM" id="Zu4-6n-wSW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8TR-eA-cwN" id="bd5-3r-gDF"/>
+                            <outlet property="delegate" destination="8TR-eA-cwN" id="TuG-GC-KFq"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="zjo-C6-N7I" kind="show" identifier="taskSegue" id="epi-UY-lSD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvV-Sk-Zk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4359" y="-292"/>
         </scene>
     </scenes>
     <resources>
