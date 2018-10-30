@@ -28,7 +28,6 @@ class UserProgressData: UITableViewController {
         userProgressDAO.getUserProgress(userId: nil, success: { (userProgressData, networkStatus) in
             //Yah, success
             
-            
             if let givenUserData = userProgressData {
                 self.userData = userProgressData
                 print("The number of module for the user is : \(givenUserData.modules.count)")
@@ -70,6 +69,8 @@ class UserProgressData: UITableViewController {
         self.selectedRow = indexPath
         //turn off selection
         tableView.deselectRow(at: indexPath, animated: true)
+        //execute the segue
+        self.performSegue(withIdentifier: "showPartsSegue", sender: tableView)
     }
     
     // MARK: - Navigation

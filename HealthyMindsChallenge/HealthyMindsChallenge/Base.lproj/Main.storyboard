@@ -79,7 +79,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaJ-Uh-YB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-294"/>
+            <point key="canvasLocation" x="689" y="-295"/>
         </scene>
         <!--Modules-->
         <scene sceneID="1Sb-r7-S8P">
@@ -113,7 +113,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dataTitle" destination="eLQ-Sk-hzS" id="oXr-9A-9AF"/>
-                                    <segue destination="pFg-XV-Bhv" kind="show" identifier="showPartsSegue" trigger="accessoryAction" id="2Ey-sa-k5B"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -124,10 +123,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Progress" id="ePg-hJ-8xX"/>
                     <navigationItem key="navigationItem" title="Modules" id="IMs-Ij-CFt"/>
+                    <connections>
+                        <segue destination="pFg-XV-Bhv" kind="show" identifier="showPartsSegue" id="89Z-nY-54Q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJN-Dj-DnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="-291"/>
+            <point key="canvasLocation" x="1572" y="-291"/>
         </scene>
         <!--Parts-->
         <scene sceneID="NOd-tN-al5">
@@ -161,7 +163,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dataTitle" destination="Zfd-0p-5bs" id="2Fl-uu-ohN"/>
-                                    <segue destination="zjo-C6-N7I" kind="show" identifier="showTaskSegue" trigger="accessoryAction" id="LmS-Hi-STe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -170,10 +171,13 @@
                             <outlet property="delegate" destination="pFg-XV-Bhv" id="y7A-WC-fHV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="tXR-uU-Gvy" kind="show" identifier="seriesSegue" id="3rQ-50-HCw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIm-Mb-DNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2449" y="-288"/>
+            <point key="canvasLocation" x="2481" y="-291"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="4pB-oO-BuE">
@@ -218,7 +222,55 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNg-3K-xv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3322" y="-281"/>
+            <point key="canvasLocation" x="4402" y="-296"/>
+        </scene>
+        <!--Series-->
+        <scene sceneID="GQE-ld-46b">
+            <objects>
+                <tableViewController title="Series" id="tXR-uU-Gvy" customClass="SeriesController" customModule="HealthyMindsChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VQh-fh-HEy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seriesCell" id="1bJ-ru-ce7" customClass="UserDataCell" customModule="HealthyMindsChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1bJ-ru-ce7" id="eyE-LV-vFP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efT-3m-EtM">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="efT-3m-EtM" secondAttribute="trailing" constant="8" id="8Iz-fi-V2R"/>
+                                        <constraint firstItem="efT-3m-EtM" firstAttribute="leading" secondItem="eyE-LV-vFP" secondAttribute="leading" constant="8" id="JAT-2f-MfY"/>
+                                        <constraint firstItem="efT-3m-EtM" firstAttribute="top" secondItem="eyE-LV-vFP" secondAttribute="top" constant="8" id="UWd-uq-3be"/>
+                                        <constraint firstAttribute="bottom" secondItem="efT-3m-EtM" secondAttribute="bottom" constant="8" id="qd0-b2-Jtd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dataTitle" destination="efT-3m-EtM" id="Xbn-tm-QJr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tXR-uU-Gvy" id="6Ke-xW-4qf"/>
+                            <outlet property="delegate" destination="tXR-uU-Gvy" id="9TM-eo-pTH"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="zjo-C6-N7I" kind="show" identifier="taskSegue" id="9kY-xh-uYi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOa-O9-3Kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3391" y="-293"/>
         </scene>
     </scenes>
     <resources>

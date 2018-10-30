@@ -1,5 +1,5 @@
 //
-//  PartsController.swift
+//  SeriesController.swift
 //  HealthyMindsChallenge
 //
 //  Created by William Calkins on 10/29/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class PartsController: UITableViewController {
+class SeriesController: UITableViewController {
     
-    var partsData : [Part]?
-    var selectedRow : IndexPath?
+    var seriesData : [Series]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,49 +31,30 @@ class PartsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return partsData?.count ?? 0
+        return self.seriesData?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let partsCell = tableView.dequeueReusableCell(withIdentifier: "PartDataCell", for: indexPath) as? UserDataCell,
-            let givenPart = self.partsData?[indexPath.row] else {
+        guard let givenSeriesCell = tableView.dequeueReusableCell(withIdentifier: "seriesCell", for: indexPath) as? UserDataCell,
+            let givenSeriesData = self.seriesData?[indexPath.row] else {
                 return UITableViewCell()
         }
         
-        partsCell.dataTitle.text = givenPart.title
+       givenSeriesCell.dataTitle.text = givenSeriesData.title
         
-        return partsCell
+        return givenSeriesCell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //record selected row
-        self.selectedRow = indexPath
-        //deselect row
-        tableView.deselectRow(at: indexPath, animated: true)
-        //Call the segue
-        self.performSegue(withIdentifier: "seriesSegue", sender: tableView)
-        
-    }
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "seriesSegue" {
-            if let seriesController = segue.destination as? SeriesController,
-                let givenIndex = self.selectedRow,
-                let givenSeriesData = self.partsData?[givenIndex.row].series {
-                //feed the series controller
-                seriesController.seriesData = givenSeriesData
-                
-            }
-        }
-        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
