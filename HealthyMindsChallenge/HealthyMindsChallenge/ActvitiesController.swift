@@ -11,6 +11,7 @@ import UIKit
 class ActvitiesController: UITableViewController {
     
     var actvities : [Activity]?
+    var selectedIndexPath: IndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +48,30 @@ class ActvitiesController: UITableViewController {
         return givenActivityCell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //set selected Index path
+        self.selectedIndexPath = indexPath
+        //deselected the row
+        tableView.deselectRow(at: indexPath, animated: true)
+        //call segue
+        self.performSegue(withIdentifier: "taskSegue", sender: tableView)
+    }
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "taskSegue" {
+            if let taskController = segue.destination as? TasksController,
+                let givenIndex = self.selectedIndexPath,
+                let givenTasks = self.actvities?[givenIndex.row].tasks {
+                
+                taskController.tasks = givenTasks
+            }
+        }
     }
-    */
+    
 
 }

@@ -11,16 +11,15 @@ import UIKit
 class TasksController: UITableViewController {
     
     var tasks : [Task]?
+    var types : [PurpleType]?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //flatten the task types into an array of string for display
+        self.types = self.tasks?.compactMap({$0.type})
+        
     }
 
     // MARK: - Table view data source
@@ -32,18 +31,18 @@ class TasksController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.tasks?.count ?? 0
+        return self.types?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let taskCell = tableView.dequeueReusableCell(withIdentifier: "TaskDataCell", for: indexPath) as? UserDataCell,
-            let givenTask = self.tasks?[indexPath.row] else {
+            let givenType = self.types?[indexPath.row]  else {
                 return UITableViewCell()
         }
         
-        taskCell.dataTitle.text = givenTask.description
+        taskCell.dataTitle.text = givenType.rawValue
         
         return taskCell
     }
