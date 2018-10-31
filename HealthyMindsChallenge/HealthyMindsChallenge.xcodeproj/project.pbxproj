@@ -26,6 +26,11 @@
 		943DC86D21872224004F6FAF /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86C21872224004F6FAF /* TasksController.swift */; };
 		943DC86F2187DACE004F6FAF /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC86E2187DACE004F6FAF /* SeriesController.swift */; };
 		943DC8712187DFF9004F6FAF /* ActvitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC8702187DFF9004F6FAF /* ActvitiesController.swift */; };
+		948171342189BD4C005DC24F /* Modules.png in Resources */ = {isa = PBXBuildFile; fileRef = 9481712F2189BD49005DC24F /* Modules.png */; };
+		948171352189BD4C005DC24F /* Activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 948171302189BD4A005DC24F /* Activities.png */; };
+		948171362189BD4C005DC24F /* Series.png in Resources */ = {isa = PBXBuildFile; fileRef = 948171312189BD4B005DC24F /* Series.png */; };
+		948171372189BD4C005DC24F /* Tasks.png in Resources */ = {isa = PBXBuildFile; fileRef = 948171322189BD4B005DC24F /* Tasks.png */; };
+		948171382189BD4C005DC24F /* Parts.png in Resources */ = {isa = PBXBuildFile; fileRef = 948171332189BD4C005DC24F /* Parts.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		943DC86C21872224004F6FAF /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
 		943DC86E2187DACE004F6FAF /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 		943DC8702187DFF9004F6FAF /* ActvitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActvitiesController.swift; sourceTree = "<group>"; };
+		9481712F2189BD49005DC24F /* Modules.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Modules.png; sourceTree = "<group>"; };
+		948171302189BD4A005DC24F /* Activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Activities.png; sourceTree = "<group>"; };
+		948171312189BD4B005DC24F /* Series.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Series.png; sourceTree = "<group>"; };
+		948171322189BD4B005DC24F /* Tasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tasks.png; sourceTree = "<group>"; };
+		948171332189BD4C005DC24F /* Parts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Parts.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,7 @@
 		943DC8532185D7E8004F6FAF /* ChallengeFiles */ = {
 			isa = PBXGroup;
 			children = (
+				9481712E2189BCE1005DC24F /* ScreenShots */,
 				943DC8562185D82D004F6FAF /* alice-progress.csv */,
 				943DC8542185D82D004F6FAF /* Readme.md */,
 			);
@@ -200,6 +211,18 @@
 				943DC8662185DE0A004F6FAF /* UserActivityDAO.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		9481712E2189BCE1005DC24F /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				948171302189BD4A005DC24F /* Activities.png */,
+				9481712F2189BD49005DC24F /* Modules.png */,
+				948171332189BD4C005DC24F /* Parts.png */,
+				948171312189BD4B005DC24F /* Series.png */,
+				948171322189BD4B005DC24F /* Tasks.png */,
+			);
+			name = ScreenShots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +331,16 @@
 			files = (
 				943DC8302185D735004F6FAF /* LaunchScreen.storyboard in Resources */,
 				943DC82D2185D735004F6FAF /* Assets.xcassets in Resources */,
+				948171362189BD4C005DC24F /* Series.png in Resources */,
 				943DC8592185D82E004F6FAF /* healthy-minds-description.json in Resources */,
+				948171372189BD4C005DC24F /* Tasks.png in Resources */,
 				943DC85B2185D82E004F6FAF /* alice-progress.json in Resources */,
+				948171382189BD4C005DC24F /* Parts.png in Resources */,
 				943DC8582185D82E004F6FAF /* Readme.md in Resources */,
+				948171352189BD4C005DC24F /* Activities.png in Resources */,
 				943DC85A2185D82E004F6FAF /* alice-progress.csv in Resources */,
 				943DC82B2185D734004F6FAF /* Main.storyboard in Resources */,
+				948171342189BD4C005DC24F /* Modules.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

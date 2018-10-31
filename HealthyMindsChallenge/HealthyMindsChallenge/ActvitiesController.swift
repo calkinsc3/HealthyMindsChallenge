@@ -47,6 +47,7 @@ class ActvitiesController: UITableViewController {
         var activityCompleted = false
         var completedActivityDate : Date?
         var completeDateForDisplay = ""
+        
         if let givenActivityMetaData = self.activityMetaData, let listOfCompletions = givenActivityMetaData.activityCompletions {
             let completedActivity = listOfCompletions.filter({$0.activityUUID == givenActivityData.uuid})
             activityCompleted = completedActivity.count > 0
