@@ -13,11 +13,13 @@ class ActvitiesController: UITableViewController {
     var actvities : [Activity]?
     var selectedIndexPath: IndexPath?
     var activityMetaData : ActivityMetaData?
+    
+    let isoDateFormatter = ISO8601DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.loadActivityMetaData()
         
     }
 
@@ -43,11 +45,20 @@ class ActvitiesController: UITableViewController {
         //find if the given activity is in the completion list; if it output the data completed on
         //it it is not output "Need to complete"
         var activityCompleted = false
+        var completedActivityDate : Date?
+        var completeDateForDisplay = ""
         if let givenActivityMetaData = self.activityMetaData, let listOfCompletions = givenActivityMetaData.activityCompletions {
-            activityCompleted = listOfCompletions.filter({$0.activityUUID == givenActivityData.uuid}).count > 0
+            let completedActivity = listOfCompletions.filter({$0.activityUUID == givenActivityData.uuid})
+            activityCompleted = completedActivity.count > 0
+            if activityCompleted {
+                completedActivityDate = completedActivity[0].lastCompletedOn
+                if let givenCompleteDate = completedActivityDate {
+                    completeDateForDisplay = self.isoDateFormatter.string(from: givenCompleteDate)
+                }
+            }
         }
         
-        givenActivityCell.dataTitle.text = (activityCompleted ? "Completed on " : "Not completed")
+        givenActivityCell.dataTitle.text = (activityCompleted ? "Completed on \(completeDateForDisplay) " : "Not completed")
         
         return givenActivityCell
     }

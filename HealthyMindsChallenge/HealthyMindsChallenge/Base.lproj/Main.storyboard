@@ -17,30 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p0O-vh-fdj">
+                                <rect key="frame" x="8" y="28" width="359" height="582"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Modules contain Parts. Parts contain Series. Series contain Activties which contain UUID. Uses this UUID to look up the completion status in the alice-progress.json and output the correct date. The user of the Codable protocol makes serializing the json into the data structure much easier. Thanks, Bill Calkins.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="p0O-vh-fdj" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="4SY-dd-tEw"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="p0O-vh-fdj" secondAttribute="bottom" constant="8" id="Akp-UI-AFZ"/>
+                            <constraint firstItem="p0O-vh-fdj" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="NZG-ab-tbh"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="p0O-vh-fdj" secondAttribute="trailing" constant="8" id="qFE-nA-kAU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Solution" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Solution" image="notes" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,10 +44,12 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" shadowImage="woman" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="k3C-cm-cf6" kind="relationship" relationship="viewControllers" id="gUo-T8-FBD"/>
@@ -64,14 +60,19 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--UserData-->
+        <!--Alice-->
         <scene sceneID="BQm-ye-omT">
             <objects>
                 <navigationController id="k3C-cm-cf6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="UserData" id="rIF-nI-thd"/>
+                    <tabBarItem key="tabBarItem" title="Alice" image="woman" selectedImage="woman" id="rIF-nI-thd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M1B-Ra-Lx5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="0Sz-oM-aIN" kind="relationship" relationship="rootViewController" id="Kjn-8l-nwP"/>
@@ -121,7 +122,7 @@
                             <outlet property="delegate" destination="0Sz-oM-aIN" id="ztA-9e-jxt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Progress" id="ePg-hJ-8xX"/>
+                    <tabBarItem key="tabBarItem" title="Alice" id="ePg-hJ-8xX"/>
                     <navigationItem key="navigationItem" title="Modules" id="IMs-Ij-CFt"/>
                     <connections>
                         <segue destination="pFg-XV-Bhv" kind="show" identifier="showPartsSegue" id="89Z-nY-54Q"/>
@@ -322,6 +323,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="notes" width="30" height="30"/>
+        <image name="woman" width="29" height="30"/>
     </resources>
 </document>
