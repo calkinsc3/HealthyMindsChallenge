@@ -293,13 +293,16 @@
 				TargetAttributes = {
 					943DC81F2185D734004F6FAF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					943DC8352185D736004F6FAF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 943DC81F2185D734004F6FAF;
 					};
 					943DC8402185D736004F6FAF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 943DC81F2185D734004F6FAF;
 					};
 				};
@@ -558,7 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -576,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -596,7 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthyMindsChallenge.app/HealthyMindsChallenge";
 			};
@@ -617,7 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthyMindsChallenge.app/HealthyMindsChallenge";
 			};
@@ -637,7 +640,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = HealthyMindsChallenge;
 			};
@@ -657,7 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.c3.HealthyMindsChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = HealthyMindsChallenge;
 			};
